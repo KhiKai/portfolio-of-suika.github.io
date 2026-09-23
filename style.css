@@ -1,0 +1,54 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Bright green background matching your reference mock-up */
+    background-color: #83f582; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a6b32; /* Dark green text color */
+}
+
+/* Header / Banner Styling */
+.banner-container {
+    width: 100%;
+    line-height: 0; /* Removes extra spacing beneath inline image */
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main Content Area */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Bio Text Styling */
+.intro-section {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.intro-section p {
+    margin-bottom: 20px;
+}
+
+/* Horizontal Divider Line */
+.section-divider {
+    border: none;
+    height: 6px;
+    background-color: #000000;
+    border-radius: 3px;
+    margin: 30px 0;
+}
