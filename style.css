@@ -1,4 +1,3 @@
-/* Keep the page edge-to-edge and remove browser defaults. */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,101 +5,84 @@
 }
 
 :root {
-  --page-green: #83f582;
-  --text-green: #08a957;
+  --page-green: #86ea75;
+  --text-green: #0b5d2d;
+  --divider-black: #000000;
 }
 
-html {
+html, body {
+  min-height: 100%;
   background: var(--page-green);
 }
 
 body {
-  min-width: 320px;
   background: var(--page-green);
   color: var(--text-green);
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-family: "Aller Bold", "Comic Sans MS", "Comic Sans", "Trebuchet MS", sans-serif;
+  font-weight: 700;
 }
 
-/* The small green band above the artwork in the reference design. */
-.top-space {
-  height: 65px;
-}
-
-.banner-container {
+.banner-wrap {
   width: 100%;
-  border-top: 18px solid #006500;
-  border-bottom: 18px solid #006500;
-  line-height: 0;
   overflow: hidden;
+  line-height: 0;
+  background: var(--page-green);
 }
 
 .banner-img {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0;
 }
 
-.content-container {
-  width: min(100% - 40px, 1710px);
+.intro-wrap {
+  width: min(100%, 1600px);
   margin: 0 auto;
-  padding: 30px 0 80px;
+  background: var(--page-green);
+  padding: 1.6rem 2.2rem 0;
 }
 
-.intro-section {
-  max-width: 1450px;
+.intro-text {
+  max-width: 1430px;
   margin: 0 auto;
-  font-size: clamp(1.5rem, 2.7vw, 3.75rem);
-  font-weight: 700;
-  line-height: 1.65;
-  text-align: left;
+  font-family: "Aller Bold", "Comic Sans MS", "Comic Sans", "Trebuchet MS", sans-serif;
+  font-size: clamp(1.7rem, 2.8vw, 4.2rem);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--text-green);
 }
 
-.intro-section p + p {
-  margin-top: 20px;
+.intro-text p {
+  margin: 0;
 }
 
-.section-divider {
+.intro-text p + p {
+  margin-top: 0.15em;
+}
+
+.divider {
   width: 100%;
-  height: 18px;
-  margin: 38px 0 0;
-  border: 0;
-  border-radius: 999px;
-  background: #000;
-}
-
-/* Visible to screen readers without changing the visual design. */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  max-width: 1260px;
+  height: 10px;
+  margin: 1.4rem 0 0;
+  background: var(--divider-black);
+  border-radius: 2px;
 }
 
 @media (max-width: 700px) {
-  .top-space {
-    height: 24px;
+  .intro-wrap {
+    padding: 1rem 1rem 0;
   }
 
-  .banner-container {
-    border-width: 8px;
+  .intro-text {
+    font-size: clamp(1.15rem, 5vw, 2.3rem);
+    line-height: 1.3;
+    letter-spacing: 0.01em;
   }
 
-  .content-container {
-    width: min(100% - 28px, 600px);
-    padding-top: 22px;
-  }
-
-  .intro-section {
-    line-height: 1.4;
-  }
-
-  .section-divider {
-    height: 8px;
-    margin-top: 28px;
+  .divider {
+    height: 7px;
+    margin-top: 0.9rem;
   }
 }
