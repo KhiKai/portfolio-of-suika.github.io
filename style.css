@@ -8,6 +8,9 @@
   --page-green: #86ea75;
   --text-green: #0b5d2d;
   --black: #000000;
+  --dark-blue: #1a2d8e;
+  --beige: #d7b17a;
+  --light-blue: #72d4ff;
 }
 
 html,
@@ -34,6 +37,11 @@ body {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.content-shell {
+  width: 100%;
+  background: var(--page-green);
 }
 
 .intro-wrap {
@@ -70,6 +78,87 @@ body {
   border-radius: 2px;
 }
 
+.work-section {
+  width: min(100%, 1600px);
+  margin: 0 auto;
+  padding: 2rem 2.2rem 4rem;
+  background: var(--page-green);
+}
+
+.work-title {
+  text-align: center;
+  font-family: "Aller Bold", "Comic Sans MS", "Comic Sans", sans-serif;
+  font-size: clamp(4rem, 6vw, 8.5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--text-green);
+  margin: 0;
+}
+
+.work-divider {
+  width: min(100%, 1260px);
+  height: 12px;
+  margin: 1.2rem auto 0;
+  background: var(--black);
+  border-radius: 2px;
+}
+
+.work-grid {
+  width: min(100%, 1250px);
+  margin: 2.5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 2.5rem 3rem;
+  align-items: end;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  color: var(--text-green);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.work-card span {
+  display: block;
+  font-family: "Aller Bold", "Comic Sans MS", "Comic Sans", sans-serif;
+  font-size: clamp(2.7rem, 4vw, 7rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--text-green);
+}
+
+.work-icon {
+  display: block;
+  width: min(52vw, 330px);
+  height: auto;
+  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+}
+
+.art-card {
+  padding-left: 1rem;
+}
+
+.music-card {
+  padding-right: 1rem;
+}
+
+.animation-card {
+  grid-column: 1 / -1;
+  margin-top: 0.8rem;
+}
+
+.animation-card .work-icon {
+  width: min(52vw, 420px);
+}
+
 @media (max-width: 700px) {
   .intro-wrap {
     padding: 1.2rem 1rem 0;
@@ -81,8 +170,30 @@ body {
     letter-spacing: 0.01em;
   }
 
-  .divider {
+  .divider,
+  .work-divider {
     height: 8px;
     margin-top: 0.9rem;
+  }
+
+  .work-section {
+    padding: 1rem 1rem 3rem;
+  }
+
+  .work-grid {
+    gap: 1.8rem 1.2rem;
+    margin-top: 1.6rem;
+  }
+
+  .work-card span {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  .work-icon {
+    width: min(62vw, 250px);
+  }
+
+  .animation-card .work-icon {
+    width: min(70vw, 300px);
   }
 }
