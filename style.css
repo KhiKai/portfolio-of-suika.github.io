@@ -8,9 +8,6 @@
   --page-green: #86ea75;
   --text-green: #0b5d2d;
   --black: #000000;
-  --dark-blue: #1a2d8e;
-  --beige: #d7b17a;
-  --light-blue: #72d4ff;
 }
 
 html,
@@ -139,7 +136,7 @@ body {
   display: block;
   width: min(52vw, 330px);
   height: auto;
-  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+  image-rendering: auto;
 }
 
 .art-card {
